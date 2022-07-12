@@ -1,0 +1,39 @@
+@import '../../styleConfig/theme.scss', '../../styleConfig/mixins.scss';
+
+.select {
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		min-height: 9.5vh;
+		&--common {
+			.select-label {
+				font-size: $label;
+				color: $gray;
+				padding-bottom: 0.3em;
+				margin-left: 5px;
+			}
+			.select {
+				background-color: $light-gray-3;
+				border: none;
+				border-radius: 10px;
+				padding: 0.5em 0.7em;
+				font-size: $text;
+				width: 100%;
+				color: $gray;
+				appearance: none;
+				line-height: 1;
+				background: url('../../assets/arrow-down.png') no-repeat right $light-gray-3;
+				background-size: 24px;
+				background-position-x: 95%;
+			}
+		}
+	}
+	&-error {
+		&--common {
+			animation: showError 0.5s;
+			@include textStyle($red, 12px, auto);
+			margin-top: 0.25rem;
+		}
+	}
+}
