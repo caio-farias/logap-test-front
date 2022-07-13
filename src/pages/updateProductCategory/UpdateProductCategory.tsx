@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { FeedbackText, RegisterProductCategoryForm } from '../../components'
 import { RegisterProductCategoryFormValues } from '../../components/RegisterProductCategoryForm'
 import { getProductCategoryById, updateProductCategory } from '../../api'
+import './index.scss'
 
 const UpdateProductCategoryPage = () => {
 	const navigate = useNavigate()
@@ -50,8 +51,8 @@ const UpdateProductCategoryPage = () => {
 	}
 
 	return (
-		<section>
-			<PageHeader className="site-page-header" onBack={() => navigate('/')} title="Editar categorias" />
+		<section className="product-category-update-page">
+			<PageHeader className="page-header" onBack={() => navigate('/')} title="Editar categorias" />
 			<FeedbackText errorMessage={errorMessage} successMessage={successMessage} />
 			{initialValues.id && (
 				<RegisterProductCategoryForm actionName="Atualizar" initialValues={initialValues} onSubmit={onSubmit} />

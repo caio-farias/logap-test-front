@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { RadioChangeEvent, Table, TablePaginationConfig } from 'antd'
+import { PageHeader, RadioChangeEvent, Table, TablePaginationConfig } from 'antd'
 import { TableViewPicker } from '../../components'
 import {
 	ProductAsTableData,
@@ -14,6 +14,7 @@ import {
 	getAllOutOfStockProductCategories,
 	getAllProductSuppliersWithProductOutOfStock,
 } from '../../api'
+import './index.scss'
 
 export const ReportsPage = () => {
 	const [loading, setLoading] = useState(false)
@@ -92,6 +93,7 @@ export const ReportsPage = () => {
 
 	return (
 		<section>
+			<PageHeader className="page-header" title="Relatórios" />
 			<TableViewPicker defaultValue={options[0]} options={options} onChange={selectTableContent} />
 			{tableContent == 'product-report' && (
 				<Table

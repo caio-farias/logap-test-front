@@ -3,7 +3,7 @@ import * as yup from 'yup'
 import { Formik, Form, FormikHelpers } from 'formik'
 import { TextInput } from '../../components'
 import { Button, Spin } from 'antd'
-
+import './index.scss'
 export interface RegisterProductSupplierFormValues {
 	id?: string
 	name: string
@@ -32,7 +32,7 @@ const RegisterProductSupplierForm = ({
 	actionName?: string
 }) => {
 	return (
-		<div>
+		<div className="register-product-supplier-form ">
 			<Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validation}>
 				{({ isSubmitting }) => (
 					<Form>

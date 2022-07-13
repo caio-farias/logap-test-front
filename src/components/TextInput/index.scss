@@ -2,6 +2,7 @@
 
 .text-input-wrapper {
 	&--common {
+		margin-top: 0.5em;
 		min-height: 9.5vh;
 		width: 100%;
 		@include displayFlex(flex, column, auto, auto);
@@ -14,7 +15,7 @@
 		}
 		.text-input {
 			&--common {
-				background-color: $light-gray-3;
+				background-color: $light-gray-2;
 				border: none;
 				border-radius: 10px;
 				padding: 0.5em 0.7em;

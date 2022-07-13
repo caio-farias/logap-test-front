@@ -7,6 +7,7 @@ import { RegisterProductFormValues } from '../../components/RegisterProductForm'
 import ProductCategory from '../../common/models/ProductCategory'
 import { createProduct, getAllProductCategories, getAllProductSuppliers } from '../../api'
 import ProductSupplier from '../../common/models/ProductSupplier'
+import './index.scss'
 
 const RegisterProductPage = () => {
 	const navigate = useNavigate()
@@ -56,8 +57,8 @@ const RegisterProductPage = () => {
 	}
 
 	return (
-		<section>
-			<PageHeader className="site-page-header" onBack={() => navigate('/')} title="Cadastro de produto" />
+		<section className="product-register-page">
+			<PageHeader className="page-header" onBack={() => navigate('/')} title="Cadastro de produto" />
 			<FeedbackText errorMessage={errorMessage} successMessage={successMessage} />
 			<RegisterProductForm
 				initialValues={initialValues}

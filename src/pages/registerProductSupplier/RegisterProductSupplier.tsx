@@ -5,6 +5,7 @@ import { FeedbackText, RegisterProductSupplierForm } from '../../components'
 import { RegisterProductSupplierFormValues } from '../../components/RegisterProductSupplierForm'
 import { FormikHelpers } from 'formik'
 import { createProductSupplier } from '../../api'
+import './index.scss'
 
 const RegisterProductSupplierPage = () => {
 	const navigate = useNavigate()
@@ -35,8 +36,8 @@ const RegisterProductSupplierPage = () => {
 	}
 
 	return (
-		<section>
-			<PageHeader className="site-page-header" onBack={() => navigate('/')} title="Cadastro de fornecedor" />
+		<section className="product-register-supplier-page">
+			<PageHeader className="page-header" onBack={() => navigate('/')} title="Cadastro de fornecedor" />
 			<FeedbackText errorMessage={errorMessage} successMessage={successMessage} />
 			<RegisterProductSupplierForm initialValues={initialValues} onSubmit={onSubmit} />
 		</section>

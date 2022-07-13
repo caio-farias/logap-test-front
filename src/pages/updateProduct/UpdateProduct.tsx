@@ -9,6 +9,7 @@ import ProductCategory from '../../common/models/ProductCategory'
 import { getAllProductCategories, getAllProductSuppliers, getProductById, updateProduct } from '../../api'
 import Product from '../../common/models/Product'
 import ProductSupplier from '../../common/models/ProductSupplier'
+import './index.scss'
 
 const UpdateProductPage = () => {
 	const navigate = useNavigate()
@@ -75,8 +76,8 @@ const UpdateProductPage = () => {
 	})
 
 	return (
-		<section>
-			<PageHeader className="site-page-header" onBack={() => navigate('/')} title="Editar produtos" />
+		<section className="product-update-page">
+			<PageHeader className="page-header" onBack={() => navigate('/')} title="Editar produtos" />
 			<FeedbackText errorMessage={errorMessage} successMessage={successMessage} />
 			{initialValues.id && (
 				<RegisterProductForm

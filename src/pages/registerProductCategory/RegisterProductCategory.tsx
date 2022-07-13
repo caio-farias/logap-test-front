@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { FeedbackText, RegisterProductCategoryForm } from '../../components'
 import { RegisterProductCategoryFormValues } from '../../components/RegisterProductCategoryForm'
 import { createProductCategory } from '../../api'
+import './index.scss'
 
 const RegisterProductCategoryPage = () => {
 	const navigate = useNavigate()
@@ -33,8 +34,8 @@ const RegisterProductCategoryPage = () => {
 	}
 
 	return (
-		<section>
-			<PageHeader className="site-page-header" onBack={() => navigate('/')} title="Cadastro de categoria" />
+		<section className="product-register-category-page">
+			<PageHeader className="page-header" onBack={() => navigate('/')} title="Cadastro de categoria" />
 			<FeedbackText errorMessage={errorMessage} successMessage={successMessage} />
 			<RegisterProductCategoryForm initialValues={initialValues} onSubmit={onSubmit} />
 		</section>

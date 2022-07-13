@@ -45,7 +45,6 @@ export const productTableColumns: ColumnsType<ProductAsTableData> = [
 				<Link to="/editar-produto" state={record}>
 					<Tag color="blue">Editar</Tag>
 				</Link>
-				<Tag color="red">Deletar</Tag>
 			</Space>
 		),
 	},
@@ -96,7 +95,6 @@ export const productCategoryTableColumns: ColumnsType<ProductCategoryAsTableData
 				<Link to="/editar-categoria" state={record}>
 					<Tag color="blue">Editar</Tag>
 				</Link>
-				<Tag color="red">Deletar</Tag>
 			</Space>
 		),
 	},
@@ -138,7 +136,6 @@ export const productSupplierTableColumns: ColumnsType<ProductSupplierAsTableData
 				<Link to="/gerenciar-produtos-fornecedor" state={record}>
 					<Tag color="gray">Gerenciar produtos</Tag>
 				</Link>
-				<Tag color="red">Deletar</Tag>
 			</Space>
 		),
 	},
@@ -152,13 +149,7 @@ export const productCategoryReportTableColumns: ColumnsType<ProductCategoryRepor
 		render: (text) => <span>{text}</span>,
 	},
 	{
-		title: 'Total de Produtos',
-		dataIndex: 'totalProducts',
-		key: 'totalProducts',
-		render: (text) => <span>{text}</span>,
-	},
-	{
-		title: 'Total em esotque',
+		title: 'Total em estoque',
 		dataIndex: 'totalInStock',
 		key: 'totalInStock',
 		render: (text) => <span>{text}</span>,

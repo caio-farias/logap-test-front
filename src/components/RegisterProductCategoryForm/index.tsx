@@ -27,7 +27,7 @@ export const RegisterProductCategoryForm = ({
 	actionName?: string
 }) => {
 	return (
-		<div>
+		<div className="register-product-category-form">
 			<Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validation}>
 				{({ isSubmitting }) => (
 					<Form aria-readonly={isSubmitting}>

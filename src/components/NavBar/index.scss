@@ -4,15 +4,28 @@
 	@include displayFlex(flex, column, center, center);
 	width: 100%;
 	height: 70px;
-	background-color: $blue;
+	background-color: #1b456c;
 	.navbar-wrapper {
-		width: 70%;
-		@include displayFlex(flex, auto, space-around, center);
+		width: 100%;
+		@include displayFlex(flex, auto, start, center);
+		padding-left: 5em;
 		&-link {
+			&-text {
+				padding-left: 0.5em;
+			}
 			@include textStyle(white, 1rem, 700);
 			&:hover {
 				opacity: 0.8;
 			}
+		}
+		&-main {
+			width: 20%;
+			@include displayFlex(flex, auto, space-between, center);
+		}
+		&-secondary {
+			margin-left: 25em;
+			width: 50%;
+			@include displayFlex(flex, auto, space-around, center);
 		}
 	}
 }

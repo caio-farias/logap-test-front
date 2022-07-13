@@ -5,6 +5,7 @@ import { FeedbackText, RegisterProductSupplierForm } from '../../components'
 import { RegisterProductSupplierFormValues } from '../../components/RegisterProductSupplierForm'
 import { FormikHelpers } from 'formik'
 import { getProductSupplierById, updateProductSupplier } from '../../api'
+import './index.scss'
 
 const UpdateProductSupplierPage = () => {
 	const navigate = useNavigate()
@@ -51,8 +52,8 @@ const UpdateProductSupplierPage = () => {
 	}
 
 	return (
-		<section>
-			<PageHeader className="site-page-header" onBack={() => navigate('/')} title="Editar fornecedor" />
+		<section className="product-supplier-update-page">
+			<PageHeader className="page-header" onBack={() => navigate('/')} title="Editar fornecedor" />
 			<FeedbackText errorMessage={errorMessage} successMessage={successMessage} />
 			{initialValues.id && (
 				<RegisterProductSupplierForm actionName="Atualizar" initialValues={initialValues} onSubmit={onSubmit} />

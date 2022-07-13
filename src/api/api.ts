@@ -7,6 +7,7 @@ api.interceptors.request.use((config) => {
 	const headers = { ...config.headers }
 
 	headers['Access-Control-Allow-Origin'] = '*'
+
 	headers['Content-Type'] = 'application/json'
 
 	return { ...config, headers }

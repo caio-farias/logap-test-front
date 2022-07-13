@@ -9,6 +9,7 @@ import {
 } from '../../api'
 import { useLocation, useNavigate } from 'react-router-dom'
 import ProductSupplier from '../../common/models/ProductSupplier'
+import './index.scss'
 
 const ManageSupplierProductsPage = () => {
 	const navigate = useNavigate()
@@ -99,11 +100,11 @@ const ManageSupplierProductsPage = () => {
 	const hasSelectedRemoveProductTable = selectedRemoveProductTableRowKeys.length > 0
 
 	return (
-		<section>
-			<PageHeader className="site-page-header" onBack={() => navigate('/')} title="Gerenciamento de produtos" />
+		<section className="product-supplier-management-page">
+			<PageHeader className="page-header" onBack={() => navigate('/')} title="Gerenciamento de produtos" />
 			<section>
 				<div style={{ marginBottom: 16 }}>
-					<PageHeader title="Adicionar produtos" />
+					<PageHeader className="page-header" title="Adicionar produtos" />
 					<Button
 						color="green"
 						type="primary"
@@ -128,7 +129,7 @@ const ManageSupplierProductsPage = () => {
 			</section>
 			<section>
 				<div style={{ marginBottom: 16 }}>
-					<PageHeader title="Remover produtos" />
+					<PageHeader className="page-header" title="Remover produtos" />
 					<Button
 						type="primary"
 						danger

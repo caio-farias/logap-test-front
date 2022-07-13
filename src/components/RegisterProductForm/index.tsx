@@ -5,6 +5,7 @@ import { Select, TextInput } from '../../components'
 import { Button, Spin } from 'antd'
 import ProductCategory from '../../common/models/ProductCategory'
 import ProductSupplier from '../../common/models/ProductSupplier'
+import './index.scss'
 
 export interface RegisterProductFormValues {
 	id?: number
@@ -41,7 +42,7 @@ export const RegisterProductForm = ({
 	isUpdate?: boolean
 }) => {
 	return (
-		<div className="register-form-wrapper">
+		<div className="register-product-form">
 			<Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validation}>
 				{({ isSubmitting }) => (
 					<Form>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { RadioChangeEvent, Table, TablePaginationConfig } from 'antd'
+import { PageHeader, RadioChangeEvent, Table, TablePaginationConfig } from 'antd'
 import { TableViewPicker } from '../../components'
 import {
 	productCategoryTableColumns,
@@ -12,6 +12,7 @@ import {
 	ProductSupplierAsTableData,
 } from '../../common/tableUtils/TableDataTypes'
 import { getAllProductCategories, getAllProducts, getAllProductSuppliers } from '../../api'
+import './index.scss'
 
 export const Dashboard = () => {
 	const [loading, setLoading] = useState(false)
@@ -90,6 +91,7 @@ export const Dashboard = () => {
 
 	return (
 		<section>
+			<PageHeader className="page-header" title="Dashboard" />
 			<TableViewPicker defaultValue={options[0]} options={options} onChange={selectTableContent} />
 			{tableContent == 'product' && (
 				<Table
