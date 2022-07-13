@@ -78,6 +78,17 @@ export const managementProductTableColumn: ColumnsType<ProductAsTableData> = [
 		dataIndex: 'quantity',
 		key: 'quantity',
 	},
+	{
+		title: 'Ações',
+		key: 'action',
+		render: (_, record) => (
+			<Space size="middle">
+				<Link to="/editar-produto" state={record}>
+					<Tag color="blue">Editar</Tag>
+				</Link>
+			</Space>
+		),
+	},
 ]
 
 export const productCategoryTableColumns: ColumnsType<ProductCategoryAsTableData> = [

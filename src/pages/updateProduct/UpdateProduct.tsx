@@ -77,7 +77,7 @@ const UpdateProductPage = () => {
 
 	return (
 		<section className="product-update-page">
-			<PageHeader className="page-header" onBack={() => navigate('/')} title="Editar produtos" />
+			<PageHeader className="page-header" onBack={() => navigate(-1)} title="Editar produtos" />
 			<FeedbackText errorMessage={errorMessage} successMessage={successMessage} />
 			{initialValues.id && (
 				<RegisterProductForm
